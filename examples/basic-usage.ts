@@ -15,7 +15,7 @@ async function main() {
 
     // Fetch roles
     const roles = await client.roles.getRoles({ guildId: 'guild_abc' });
-    console.log('Available Roles:', roles.map(r => r.name).join(', '));
+    console.log('Available Roles:', roles.map((r) => r.name).join(', '));
   } catch (error) {
     console.error('Error:', error);
   }

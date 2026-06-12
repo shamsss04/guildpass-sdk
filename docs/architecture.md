@@ -5,10 +5,13 @@ The GuildPass SDK is designed to be lightweight, modular, and easy to extend.
 ## Core Components
 
 ### 1. GuildPassClient
+
 The main entry point. It orchestrates the various services and holds the configuration.
 
 ### 2. HttpClient
+
 A wrapper around the native `fetch` API. It handles:
+
 - Base URL management
 - API Key injection
 - Timeout handling
@@ -16,14 +19,18 @@ A wrapper around the native `fetch` API. It handles:
 - JSON parsing
 
 ### 3. Services
+
 Each service corresponds to a specific domain of the GuildPass protocol:
+
 - **AccessService**: Handles `/access` endpoints.
 - **MembershipService**: Handles `/membership` endpoints.
 - **RolesService**: Handles `/guilds/:id/roles` endpoints.
 - **GuildsService**: Handles `/guilds` configuration endpoints.
 
 ### 4. ContractClient
+
 Designed for future on-chain support. Currently provides stubs and validation patterns for:
+
 - Token balance checks
 - On-chain role requirement validation
 - Guild ownership lookup

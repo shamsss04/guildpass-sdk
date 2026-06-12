@@ -31,9 +31,11 @@ try {
 ## Environment Support
 
 ### Node.js
+
 The SDK works in Node.js 18+. If you are on an older version, you may need to polyfill `fetch`.
 
 ### Browser
+
 The SDK is tree-shakeable and optimized for modern browsers. It does not include any Node-only dependencies.
 
 ## Address Normalization
@@ -41,9 +43,9 @@ The SDK is tree-shakeable and optimized for modern browsers. It does not include
 The SDK automatically normalizes addresses to lowercase for consistency. You can also use the exported utility:
 
 ```typescript
-import { normaliseAddress } from "@guildpass/sdk";
+import { normaliseAddress } from '@guildpass/sdk';
 
-const clean = normaliseAddress("0xABC...");
+const clean = normaliseAddress('0xABC...');
 ```
 
 ## Timeouts
@@ -52,7 +54,7 @@ The default timeout is 10 seconds. You can override this globally or per request
 
 ```typescript
 const client = new GuildPassClient({
-  apiUrl: "...",
+  apiUrl: '...',
   timeoutMs: 5000, // 5 seconds
 });
 ```

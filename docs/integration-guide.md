@@ -8,21 +8,21 @@ In a Next.js application, you can check access on the server-side inside `getSer
 
 ```typescript
 // middleware.ts
-import { GuildPassClient } from "@guildpass/sdk";
+import { GuildPassClient } from '@guildpass/sdk';
 
 const client = new GuildPassClient({ apiUrl: process.env.GUILDPASS_API });
 
 export async function middleware(req) {
-  const wallet = req.cookies.get("wallet_address");
-  
+  const wallet = req.cookies.get('wallet_address');
+
   const { hasAccess } = await client.access.checkAccess({
     walletAddress: wallet,
-    guildId: "premium-guild",
-    resourceId: req.nextUrl.pathname
+    guildId: 'premium-guild',
+    resourceId: req.nextUrl.pathname,
   });
 
   if (!hasAccess) {
-    return NextResponse.redirect("/join");
+    return NextResponse.redirect('/join');
   }
 }
 ```
@@ -33,14 +33,14 @@ Use the SDK inside your Discord bot command handlers to verify roles or membersh
 
 ```typescript
 // commands/verify.ts
-import { GuildPassClient } from "@guildpass/sdk";
+import { GuildPassClient } from '@guildpass/sdk';
 
 export async function execute(interaction) {
   const wallet = getWalletFromDb(interaction.user.id);
-  
+
   const isMember = await client.membership.isMember({
     walletAddress: wallet,
-    guildId: "my-discord-guild"
+    guildId: 'my-discord-guild',
   });
 
   if (isMember) {
@@ -54,6 +54,6 @@ export async function execute(interaction) {
 Fetch guild configurations to build custom management dashboards.
 
 ```typescript
-const config = await client.guilds.getGuildConfig({ guildId: "my-guild" });
+const config = await client.guilds.getGuildConfig({ guildId: 'my-guild' });
 // Use config.theme, config.socialLinks etc to render the UI
 ```

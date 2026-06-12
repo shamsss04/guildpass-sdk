@@ -28,7 +28,7 @@ describe('Service Modules', () => {
       expect(result).toEqual(mockResult);
       expect(fetch).toHaveBeenCalledWith(
         expect.stringContaining('/access/check'),
-        expect.any(Object)
+        expect.any(Object),
       );
     });
   });
@@ -66,7 +66,7 @@ describe('Service Modules', () => {
       expect(result).toEqual(mockRoles);
       expect(fetch).toHaveBeenCalledWith(
         expect.stringContaining('/guilds/guild_1/roles'),
-        expect.any(Object)
+        expect.any(Object),
       );
     });
   });

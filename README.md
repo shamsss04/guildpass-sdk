@@ -56,23 +56,23 @@ yarn add @guildpass/sdk
 Initialize the client and check access in seconds.
 
 ```typescript
-import { GuildPassClient } from "@guildpass/sdk";
+import { GuildPassClient } from '@guildpass/sdk';
 
 // 1. Initialize the client
 const client = new GuildPassClient({
-  apiUrl: "https://api.guildpass.xyz",
+  apiUrl: 'https://api.guildpass.xyz',
   chainId: 8453, // Base Mainnet
 });
 
 // 2. Perform an access check
 const result = await client.access.checkAccess({
-  walletAddress: "0x1234...5678",
-  guildId: "prime-guild",
-  resourceId: "premium-docs",
+  walletAddress: '0x1234...5678',
+  guildId: 'prime-guild',
+  resourceId: 'premium-docs',
 });
 
 if (result.hasAccess) {
-  console.log("✅ Access Granted");
+  console.log('✅ Access Granted');
 } else {
   console.log(`❌ Denied: ${result.reason}`);
 }
@@ -82,13 +82,13 @@ if (result.hasAccess) {
 
 The SDK is organized into focused service modules accessible via the main client:
 
-| Module | Purpose |
-| :--- | :--- |
-| `client.access` | Handle resource gating and role-based access checks. |
-| `client.membership` | Query wallet membership status and join dates. |
-| `client.roles` | Retrieve available roles and user assignments. |
-| `client.guilds` | Fetch guild metadata, themes, and social links. |
-| `client.contracts` | Future on-chain interaction stubs (MVP). |
+| Module              | Purpose                                              |
+| :------------------ | :--------------------------------------------------- |
+| `client.access`     | Handle resource gating and role-based access checks. |
+| `client.membership` | Query wallet membership status and join dates.       |
+| `client.roles`      | Retrieve available roles and user assignments.       |
+| `client.guilds`     | Fetch guild metadata, themes, and social links.      |
+| `client.contracts`  | Future on-chain interaction stubs (MVP).             |
 
 ## ⚙️ Configuration
 

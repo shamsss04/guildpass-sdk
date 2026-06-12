@@ -43,6 +43,7 @@ By participating you agree to our [Code of Conduct](./CODE_OF_CONDUCT.md).
 4. Wait for a maintainer to assign it before starting — this avoids duplicate effort.
 
 Direct GitHub filters:
+
 - [`good first issue`](https://github.com/Adamantine-Guild/guildpass-sdk/issues?q=label%3A%22good+first+issue%22)
 - [`help wanted`](https://github.com/Adamantine-Guild/guildpass-sdk/issues?q=label%3A%22help+wanted%22)
 
@@ -74,14 +75,14 @@ pnpm test:run
 
 ### Project structure
 
-| Path | Purpose |
-|---|---|
-| `src/` | SDK source code (services, types, client) |
-| `src/index.ts` | Public API entry point |
-| `tests/` | Vitest unit tests |
-| `docs/` | Markdown documentation guides |
-| `examples/` | Usage examples |
-| `dist/` | Build output (generated, do not edit) |
+| Path           | Purpose                                   |
+| -------------- | ----------------------------------------- |
+| `src/`         | SDK source code (services, types, client) |
+| `src/index.ts` | Public API entry point                    |
+| `tests/`       | Vitest unit tests                         |
+| `docs/`        | Markdown documentation guides             |
+| `examples/`    | Usage examples                            |
+| `dist/`        | Build output (generated, do not edit)     |
 
 ---
 

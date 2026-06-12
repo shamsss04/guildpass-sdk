@@ -22,15 +22,15 @@ gh label create "wont-fix" --color "ffffff" --description "This will not be work
 
 ## Label Usage Guide
 
-| Label | When to use |
-|---|---|
+| Label              | When to use                                                        |
+| ------------------ | ------------------------------------------------------------------ |
 | `good first issue` | Clear scope, low risk, TypeScript-only, great for new contributors |
-| `help wanted` | Community help wanted; may require more SDK context |
-| `bug` | Confirmed broken behaviour in the SDK |
-| `feature` | New method, module, or exported type |
-| `documentation` | TypeDoc comments, README, or `docs/` changes |
-| `breaking change` | Removes or changes existing public API — semver major |
-| `tests` | Vitest test additions or fixes |
-| `types` | TypeScript type definition changes |
-| `examples` | Changes to or additions in `examples/` |
-| `priority: high` | Blocks SDK consumers — address within 48 h |
+| `help wanted`      | Community help wanted; may require more SDK context                |
+| `bug`              | Confirmed broken behaviour in the SDK                              |
+| `feature`          | New method, module, or exported type                               |
+| `documentation`    | TypeDoc comments, README, or `docs/` changes                       |
+| `breaking change`  | Removes or changes existing public API — semver major              |
+| `tests`            | Vitest test additions or fixes                                     |
+| `types`            | TypeScript type definition changes                                 |
+| `examples`         | Changes to or additions in `examples/`                             |
+| `priority: high`   | Blocks SDK consumers — address within 48 h                         |

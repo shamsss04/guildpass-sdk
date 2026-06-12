@@ -1,4 +1,4 @@
-// Node.js example using CommonJS-like imports if needed, 
+// Node.js example using CommonJS-like imports if needed,
 // but here we use ESM as the SDK supports both.
 import { GuildPassClient, GuildPassErrorCode } from '../src';
 

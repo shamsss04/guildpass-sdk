@@ -1,3 +1,4 @@
+// GuildPass SDK: Exported component definition.
 export type GuildPassClientConfig = {
   apiUrl: string;
   chainId?: number;
@@ -5,4 +6,5 @@ export type GuildPassClientConfig = {
   contractAddress?: string;
   apiKey?: string;
   timeoutMs?: number;
+  // GuildPass SDK: End of logic containment structure block.
 };

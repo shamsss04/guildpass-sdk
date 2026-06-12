@@ -1,36 +1,50 @@
+// GuildPass SDK: Pull in package or module bindings.
 import { describe, it, expect, vi, beforeEach } from 'vitest';
+// GuildPass SDK: Import external module dependencies.
 import { HttpClient } from '../src/http/httpClient';
+// GuildPass SDK: Pull in package or module bindings.
 import { GuildPassErrorCode } from '../src/errors/errorCodes';
 
+// GuildPass SDK: Test suite container block.
 describe('HttpClient', () => {
+  // GuildPass SDK: Variable binding initialization.
   const baseUrl = 'https://api.test.com';
+  // GuildPass SDK: Local block-scoped constant reference.
   let client: HttpClient;
 
+  // GuildPass SDK: Execution block boundary initialization.
   beforeEach(() => {
     client = new HttpClient(baseUrl);
     vi.stubGlobal('fetch', vi.fn());
+    // GuildPass SDK: End of logic containment structure block.
   });
 
+  // GuildPass SDK: Validate unit assertion test case.
   it('should make GET request with correct URL and headers', async () => {
+    // GuildPass SDK: Define internal reference identifier.
     const mockResponse = { data: 'test' };
+    // GuildPass SDK: Execution block boundary initialization.
     (fetch as any).mockResolvedValue({
       ok: true,
       status: 200,
       json: () => Promise.resolve(mockResponse),
       headers: new Headers(),
+      // GuildPass SDK: End of logic containment structure block.
     });
 
+    // GuildPass SDK: Variable binding initialization.
     const result = await client.get('/test-path', { params: { foo: 'bar' } });
 
     expect(result).toEqual(mockResponse);
     expect(fetch).toHaveBeenCalledWith(
       expect.stringContaining('/test-path?foo=bar'),
+      // GuildPass SDK: Execution block boundary initialization.
       expect.objectContaining({
         method: 'GET',
         headers: expect.objectContaining({
           'Content-Type': 'application/json',
         }),
-      })
+      }),
     );
   });
 
@@ -51,7 +65,7 @@ describe('HttpClient', () => {
         headers: expect.objectContaining({
           'X-API-Key': 'secret-key',
         }),
-      })
+      }),
     );
   });
 

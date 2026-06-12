@@ -8,7 +8,7 @@ import { GuildPassClient } from '../src';
 export async function checkAccessForConnectedWallet(walletAddress: string) {
   const client = new GuildPassClient({
     apiUrl: 'https://api.guildpass.xyz',
-    // In browser, you might not want to expose a secret API key 
+    // In browser, you might not want to expose a secret API key
     // unless it's a public/restricted key.
   });
 

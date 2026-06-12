@@ -7,6 +7,7 @@ This document lists tasks suitable for **GrantFox campaign contributions**.
 ## 🟢 Ready to Contribute
 
 ### TASK-SDK-001: Add TypeDoc comments to all public exported functions
+
 - **Difficulty**: Easy
 - **Labels**: `good first issue`, `documentation`, `types`
 - **Description**: Several exported functions and types in `src/` are missing TypeDoc `/** */` comments. Add JSDoc/TypeDoc comments describing parameters, return values, and usage.
@@ -21,6 +22,7 @@ This document lists tasks suitable for **GrantFox campaign contributions**.
 ---
 
 ### TASK-SDK-002: Add unit tests for the `client.access` service
+
 - **Difficulty**: Easy–Medium
 - **Labels**: `good first issue`, `tests`
 - **Description**: The `client.access` service has limited or no unit tests. Add Vitest tests that mock HTTP responses and verify correct return values and error handling.
@@ -36,6 +38,7 @@ This document lists tasks suitable for **GrantFox campaign contributions**.
 ---
 
 ### TASK-SDK-003: Add a Node.js usage example to examples/
+
 - **Difficulty**: Easy
 - **Labels**: `good first issue`, `documentation`, `examples`
 - **Description**: The `examples/` directory is sparse. Add a complete, runnable Node.js example demonstrating initialisation, membership check, and access check.
@@ -51,6 +54,7 @@ This document lists tasks suitable for **GrantFox campaign contributions**.
 ---
 
 ### TASK-SDK-004: Add a CI workflow for test, typecheck, and build
+
 - **Difficulty**: Easy
 - **Labels**: `good first issue`, `tests`
 - **Description**: Add a GitHub Actions workflow that runs on every push and PR: `pnpm typecheck`, `pnpm lint`, `pnpm test:run`, and `pnpm build`.
@@ -65,6 +69,7 @@ This document lists tasks suitable for **GrantFox campaign contributions**.
 ---
 
 ### TASK-SDK-005: Improve error messages in access check error responses
+
 - **Difficulty**: Easy–Medium
 - **Labels**: `good first issue`, `feature`
 - **Description**: When `client.access.checkAccess()` receives a non-200 response, the error thrown has a generic message. Improve it to include the HTTP status code, the URL called, and the server-returned error body (if any).
@@ -88,4 +93,4 @@ This document lists tasks suitable for **GrantFox campaign contributions**.
 
 ---
 
-*To apply for a task, visit [GrantFox](https://contribute.grantfox.xyz) or comment on the linked GitHub issue.*
+_To apply for a task, visit [GrantFox](https://contribute.grantfox.xyz) or comment on the linked GitHub issue._

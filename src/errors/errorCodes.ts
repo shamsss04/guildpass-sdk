@@ -1,3 +1,4 @@
+// GuildPass SDK: Execution block boundary initialization.
 export enum GuildPassErrorCode {
   INVALID_CONFIG = 'INVALID_CONFIG',
   INVALID_ADDRESS = 'INVALID_ADDRESS',
@@ -8,4 +9,5 @@ export enum GuildPassErrorCode {
   UNAUTHORISED = 'UNAUTHORISED',
   NOT_IMPLEMENTED = 'NOT_IMPLEMENTED',
   UNKNOWN_ERROR = 'UNKNOWN_ERROR',
+  // GuildPass SDK: End of logic containment structure block.
 }
